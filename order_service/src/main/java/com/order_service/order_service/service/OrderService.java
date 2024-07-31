@@ -6,6 +6,7 @@ import java.util.UUID;
 
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.order_service.order_service.dto.OrderLineItemsDto;
 import com.order_service.order_service.dto.OrderRequest;
@@ -18,6 +19,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OrderService {
 
     private final OrderRepository orderRepository;
